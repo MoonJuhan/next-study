@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import LinkWrapper from '/components/LinkWrapper'
-import LinkIndex from '/components/LinkIndex'
+import LinkWrapper from '@/components/LinkWrapper'
+import LinkIndex from '@/components/LinkIndex'
 
 function Test02() {
   return (
