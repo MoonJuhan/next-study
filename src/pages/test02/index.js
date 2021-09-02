@@ -9,6 +9,8 @@ function Test02() {
       <LinkWrapper>
         <LinkIndex />
         <Link href="/test01">Test01</Link>
+        <Link href="/test02/1">Test02_Query_1</Link>
+        <Link href="/test02/2">Test02_Query_2</Link>
       </LinkWrapper>
     </div>
   )
