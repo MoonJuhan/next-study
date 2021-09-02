@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import LinkWrapper from '@/components/LinkWrapper'
 import LinkIndex from '@/components/LinkIndex'
+import Parent from '@/components/Parent'
 
 function Test01() {
   return (
@@ -10,6 +11,8 @@ function Test01() {
         <LinkIndex />
         <Link href="/test02">Test02</Link>
       </LinkWrapper>
+
+      <Parent></Parent>
     </div>
   )
 }
