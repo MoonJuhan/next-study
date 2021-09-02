@@ -1,9 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Child = (props) => {
   console.log('Created and Updated')
 
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    // watch & mounted
+    console.log(`Count Change: ${count}`)
+    return () => {
+      // Before Updated
+      console.log(`Clean Up ${count}`)
+    }
+  })
+
+  useEffect(() => {
+    // mounted
+    console.log(`Mounted`)
+  }, [])
+
+  useEffect(() => {
+    // watch ?
+    console.log(`Watch Props Count: ${props.count}`)
+  }, [props.count])
 
   const onClickButton = () => {
     console.log('Click')
