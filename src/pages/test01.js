@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Link from 'next/link'
 import LinkWrapper from '@/components/LinkWrapper'
 import LinkIndex from '@/components/LinkIndex'
@@ -10,6 +12,12 @@ function Test01() {
       result.push(i != 0 ? <li key={i}>{i + 1}</li> : <li key={i}>nope</li>)
     }
     return result
+  }
+
+  const [value, setValue] = useState(0)
+
+  const handleChange = (e) => {
+    setValue(e.target.value)
   }
 
   return (
@@ -26,6 +34,8 @@ function Test01() {
       <div>
         <ul>{repeatFunc()}</ul>
       </div>
+      <input type="text" value={value} onChange={handleChange} />
+      <h3>{value}</h3>
     </div>
   )
 }
