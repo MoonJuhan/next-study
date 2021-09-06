@@ -7,7 +7,7 @@ function Test01() {
   const repeatFunc = () => {
     const result = []
     for (let i = 0; i < 3; i++) {
-      result.push(<li key={i}>{i + 1}</li>)
+      result.push(i != 0 ? <li key={i}>{i + 1}</li> : <li key={i}>nope</li>)
     }
     return result
   }
